@@ -8,7 +8,7 @@ find_package(Threads REQUIRED)
 
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/test_package.cpp)
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME test_package)
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD REQUIRED 11)
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 11)
 if(PAHO_BUILD_STATIC)
 	target_link_libraries(${PROJECT_NAME} PahoMqttCpp::paho-mqttpp3-static)
 else()
